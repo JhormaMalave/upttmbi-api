@@ -1,4 +1,4 @@
-module authenticate
+module Authenticable
   def current_user
     return @current_user if @current_user
 
