@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :tokens, only: %i[create] 
       resources :roles, only: %i[index]
       resources :periods, only: %i[index show create update destroy]
+      resources :courses, only: [:index]
     end
   end
 
