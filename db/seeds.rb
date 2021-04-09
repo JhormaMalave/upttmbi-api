@@ -12,3 +12,10 @@ roles = ['Departamento', 'Docente']
 roles.each do |role|
   Role.find_or_create_by({name: role})
 end
+
+# Adds courses
+courses = [0,1,2,3,4]
+
+courses.each do |course|
+  Course.find_or_create_by({name: course})
+end
