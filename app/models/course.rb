@@ -1,4 +1,5 @@
 class Course < ApplicationRecord
-  validates :name, uniqueness: true
+  has_many :sections
 
+  validates :name, uniqueness: true
 end
