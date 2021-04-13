@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  curricular_units: 1
+  duration: 1
+  type: 1
+  status: false
+  course: one
+
+two:
+  name: MyString
+  curricular_units: 1
+  duration: 1
+  type: 1
+  status: false
+  course: two
