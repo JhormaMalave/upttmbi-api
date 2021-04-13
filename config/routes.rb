@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       resources :periods, only: %i[index show create update destroy]
       resources :courses, only: [:index]
       resources :sections, only: %i[index show create update destroy]
+      resources :subjects, only: %i[index show create update destroy]
     end
   end
 

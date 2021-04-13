@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_13_015346) do
+ActiveRecord::Schema.define(version: 2021_04_13_022544) do
 
   create_table "courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "name", null: false
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2021_04_13_015346) do
     t.string "name", null: false
     t.integer "curricular_units"
     t.integer "duration"
-    t.integer "type"
+    t.integer "subject_type"
     t.boolean "status", null: false
     t.bigint "course_id", null: false
     t.datetime "created_at", precision: 6, null: false
