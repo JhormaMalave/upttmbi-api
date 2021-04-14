@@ -6,16 +6,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Adds initial roles to database
 roles = ['Departamento', 'Docente']
+
+courses = [0,1,2,3,4]
+
+teacher_categories = [
+  'No definido',
+  'Instructor',
+  'Asistente',
+  'Agregado',
+  'Asociado',
+  'Titular'
+]
+
+courses.each do |course|
+  Course.find_or_create_by({name: course})
+end
 
 roles.each do |role|
   Role.find_or_create_by({name: role})
 end
 
-# Adds courses
-courses = [0,1,2,3,4]
-
-courses.each do |course|
-  Course.find_or_create_by({name: course})
+teacher_categories.each do |teacher_category|
+  TeacherCategory.find_or_create_by({name: teacher_category})
 end
+  
