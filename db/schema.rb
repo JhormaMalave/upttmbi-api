@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_13_190120) do
+ActiveRecord::Schema.define(version: 2021_04_16_123411) do
 
   create_table "courses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.integer "name", null: false
@@ -63,6 +63,22 @@ ActiveRecord::Schema.define(version: 2021_04_13_190120) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "teachers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.integer "id_type", null: false
+    t.string "id_number", null: false
+    t.string "name", null: false
+    t.string "surname", null: false
+    t.date "birth_date"
+    t.string "cellphone_number"
+    t.string "email"
+    t.text "observation"
+    t.date "hire_date"
+    t.date "ordinary_date"
+    t.boolean "status", null: false
+    t.bigint "teacher_category_id", null: false
+    t.index ["teacher_category_id"], name: "index_teachers_on_teacher_category_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "email", null: false
     t.string "password_digest", null: false
@@ -76,5 +92,6 @@ ActiveRecord::Schema.define(version: 2021_04_13_190120) do
   add_foreign_key "sections", "courses"
   add_foreign_key "sections", "periods"
   add_foreign_key "subjects", "courses"
+  add_foreign_key "teachers", "teacher_categories"
   add_foreign_key "users", "roles"
 end

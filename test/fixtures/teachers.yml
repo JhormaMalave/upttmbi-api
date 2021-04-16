@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_type: 1
+  id_number: 1
+  name: MyString
+  surname: MyString
+  birth_date: 2021-04-16
+  cellphone_number: MyString
+  email: MyString
+  observation: MyText
+  hire_date: 2021-04-16
+  ordinary_date: 2021-04-16
+  status: false
+  teacher_category: one
+
+two:
+  id_type: 1
+  id_number: 1
+  name: MyString
+  surname: MyString
+  birth_date: 2021-04-16
+  cellphone_number: MyString
+  email: MyString
+  observation: MyText
+  hire_date: 2021-04-16
+  ordinary_date: 2021-04-16
+  status: false
+  teacher_category: two
