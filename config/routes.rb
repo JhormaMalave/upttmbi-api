@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :sections, only: %i[index show create update destroy]
       resources :subjects, only: %i[index show create update destroy]
       resources :teacher_categories, only: %i[index]
+      resources :teachers, only: %i[index show create update destroy]
     end
   end
 
