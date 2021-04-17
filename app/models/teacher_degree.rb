@@ -4,5 +4,5 @@ class TeacherDegree < ApplicationRecord
   enum degree_type: ['Pregrado', 'Postgrado']
   validates :name, presence: true, uniqueness: { scope: [:degree_type, :teacher] }
   validates :degree_type, presence: true
-  validates :status, presence: true
+  validates :status, inclusion: { in: [ true, false ] }
 end

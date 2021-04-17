@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :subjects, only: %i[index show create update destroy]
       resources :teacher_categories, only: %i[index]
       resources :teachers, only: %i[index show create update destroy]
+      resources :teacher_degrees, only: %i[index show create update destroy]
     end
   end
 
