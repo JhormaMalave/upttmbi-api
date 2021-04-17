@@ -1,5 +1,6 @@
 class Teacher < ApplicationRecord
   belongs_to :teacher_category
+  has_many :teachers, dependent: :destroy
 
   enum id_type: ['v', 'p']
   validates :id_number, presence: true, uniqueness: { scope: :id_type }
